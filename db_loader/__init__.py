@@ -11,7 +11,7 @@ c.execute('''create index if not exists url_mapping_ts_idx on url_mapping(create
 c.execute('''CREATE TRIGGER if not exists delete_old_entries
 AFTER INSERT ON url_mapping
 BEGIN
-    DELETE FROM url_mapping WHERE datetime(created_at) < datetime('now', '-10 minutes');
+    DELETE FROM url_mapping WHERE created_at-strftime('%s', datetime('now', '-10 minutes')) <= 0;
 END;''')
 
 ans = c.execute('select * from url_mapping')

@@ -28,8 +28,7 @@ async def say_hello2(url: Url):
     while True:
         try:
             print("Inserting... with hash ", url.hash_key)
-            db_loader.c.execute("INSERT INTO url_mapping VALUES (?,?,?)", (url.hash_key, url.url,
-                                                                           dt.now().timestamp()))
+            db_loader.c.execute("INSERT INTO url_mapping VALUES (?,?,?)", (url.hash_key, url.url, dt.now().timestamp()))
             db_loader.conn.commit()
             break
         except Exception as e:
@@ -39,4 +38,4 @@ async def say_hello2(url: Url):
 
 
 if __name__ == "__main__":
-    run(app, host="0.0.0.0", port=int(os.getenv("PORT")))
+    run(app, host="0.0.0.0", port=8002)
