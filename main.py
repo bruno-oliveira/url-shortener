@@ -4,6 +4,7 @@ import timestamp
 from fastapi import FastAPI
 from fastapi.responses import JSONResponse, Response, ORJSONResponse
 from sqlite3 import *
+from uvicorn import run
 
 import db_loader
 from model.url import Url
@@ -35,3 +36,7 @@ async def say_hello2(url: Url):
             print(e)
             url.hash_key = os.urandom(10).hex()
     return {"message": f"Hello, {url}"}
+
+
+if __name__ == "__main__":
+    run(app, host="0.0.0.0", port=os.getenv("PORT"))
