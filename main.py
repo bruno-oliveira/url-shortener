@@ -1,9 +1,7 @@
 import os
 from datetime import datetime as dt
-import timestamp
 from fastapi import FastAPI
-from fastapi.responses import JSONResponse, Response, ORJSONResponse
-from sqlite3 import *
+from fastapi.responses import JSONResponse, RedirectResponse
 from uvicorn import run
 
 import db_loader
@@ -34,7 +32,14 @@ async def say_hello2(url: Url):
         except Exception as e:
             print(e)
             url.hash_key = os.urandom(10).hex()
-    return {"message": f"Hello, {url}"}
+    return {"message": f"Hello, {url.hash_key}"}
+
+
+@app.post("/{hash}")
+async def redirect(hash: str):
+        url = db_loader.c.execute("select url from url_mapping where hash_key=%s", hash)
+        return RedirectResponse(url, status_code=303)
+
 
 
 if __name__ == "__main__":

@@ -1,8 +1,6 @@
-from datetime import datetime
 from typing import Optional
 
 import timestamp
-from fastapi import FastAPI
 from pydantic import BaseModel
 
 
