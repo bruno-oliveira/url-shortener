@@ -39,4 +39,4 @@ async def say_hello2(url: Url):
 
 
 if __name__ == "__main__":
-    run(app, host="0.0.0.0", port=8002)
+    run(app, host="0.0.0.0", port=int(os.getenv("PORT")))
