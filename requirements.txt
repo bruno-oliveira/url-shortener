@@ -1,10 +1,6 @@
-h11~=0.14.0
-Pillow~=10.1.0
-pip~=22.3.1
+pip~=23.3
 response~=0.5.0
 setuptools~=65.5.1
-click~=8.1.7
-uvloop~=0.18.0
 fastapi~=0.103.2
 starlette~=0.27.0
 pydantic~=2.4.2
