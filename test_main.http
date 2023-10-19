@@ -1,0 +1,23 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/short
+Content-Type: application/json
+
+{
+  "hash_key": "aaacb",
+  "url": "aaaa",
+  "created_at": "2032-04-23T10:20:30.400+02:30"
+}
+
+
+###
