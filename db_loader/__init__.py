@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('example.db')
+conn = sqlite3.connect('db_loader/example.db')
 c = conn.cursor()
 
 c.execute('''CREATE TABLE IF NOT EXISTS url_mapping
