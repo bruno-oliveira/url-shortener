@@ -4,12 +4,12 @@ services:
     tty: true
     image: container-e1xgnp0
     build:
-      context: ./src
+      context: .
     ports:
-      - "5000:5000"
+      - "8002:8002"
     volumes:
       - type: bind
-        source: ./src/web
+        source: .
         target: /usr/src/app
     environment:
       ALLOWED_HOSTS: "127.0.0.1,localhost"
