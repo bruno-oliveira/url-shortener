@@ -1,3 +1,16 @@
+# v0.0.3 (Fri Oct 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Merge remote-tracking branch 'origin/main' (b.oliveira@sig.eu)
+- Static port (b.oliveira@sig.eu)
+
+#### Authors: 1
+
+- Bruno Oliveira (b.oliveira@sig.eu)
+
+---
+
 # v0.0.2 (Fri Oct 20 2023)
 
 #### ⚠️ Pushed to `main`
