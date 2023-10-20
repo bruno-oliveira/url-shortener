@@ -35,11 +35,10 @@ async def say_hello2(url: Url):
     return {"message": f"Hello, {url.hash_key}"}
 
 
-@app.get("/{hash}")
-async def redirect(hash: str):
-        url = db_loader.c.execute("select url from url_mapping where hash_key=?", hash)
-        return RedirectResponse(url, status_code=303)
-
+@app.get("/{hash_key}")
+async def redirect(hash_key: str):
+    url = db_loader.c.execute("select url from url_mapping where hash_key=(?)", hash_key)
+    return RedirectResponse(url, status_code=303)
 
 
 if __name__ == "__main__":
