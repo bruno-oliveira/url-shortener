@@ -1,3 +1,15 @@
+# v0.0.2 (Fri Oct 20 2023)
+
+#### ⚠️ Pushed to `main`
+
+- Update docker-compose.yml ([@bruno-oliveira](https://github.com/bruno-oliveira))
+
+#### Authors: 1
+
+- Bruno Oliveira ([@bruno-oliveira](https://github.com/bruno-oliveira))
+
+---
+
 # v0.0.1 (Fri Oct 20 2023)
 
 :tada: This release contains work from a new contributor! :tada:
