@@ -1,0 +1,12 @@
+{
+  "plugins": [
+    "git-tag",
+    "all-contributors",
+    "first-time-contributor",
+    "released"
+  ],
+  "owner": "bruno-oliveira",
+  "repo": "url-shortener",
+  "name": "bruno-oliveira",
+  "email": "olivbruno8@gmail.com",
+}
