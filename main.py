@@ -37,7 +37,7 @@ async def say_hello2(url: Url):
 
 @app.get("/{hash_key}")
 async def redirect(hash_key: str):
-    url = db_loader.c.execute("select url from url_mapping where hash_key=(?)", hash_key)
+    url = db_loader.c.execute("select url from url_mapping where hash_key=(?)", (hash_key,))
     return RedirectResponse(url, status_code=303)
 
 
