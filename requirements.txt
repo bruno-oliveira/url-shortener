@@ -9,3 +9,5 @@ click
 uvicorn
 setuptools
 timestamp
+jinja2
+python-multipart

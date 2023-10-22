@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 16px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 300px;
+        }
+        input, button {
+            margin-bottom: 12px;
+            padding: 8px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<form action="/short" method="post">
+    <input type="url" name="long_url" placeholder="Enter long URL" required>
+    <button type="submit">Shorten URL</button>
+</form>
+{% if request.method == 'POST' %}
+<div>
+    Short URL: <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+</div>
+{% endif %}
+</body>
+</html>
